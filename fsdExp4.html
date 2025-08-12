@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All CSS Selectors Example</title>
+    <link rel="stylesheet" href="fsdExp4.css">
+    <style>
+        
+/* Element Selector */
+p { color: blue; }
+
+/* ID Selector */
+#main-heading { color: crimson; }
+
+/* Class Selector */
+.highlight { background-color: yellow; }
+
+/* Group Selector */
+h2, h3 { font-style: italic; }
+
+/* Universal Selector */
+* { font-family: Arial, sans-serif; }
+
+/* ---------------- COMBINATOR SELECTORS ---------------- */
+
+/* Descendant Selector (p inside div) */
+div p {
+     border: 1px solid green;
+     }
+
+/* Child Selector (span directly inside div) */
+div > span { 
+    color: purple; 
+}
+
+/* Adjacent Sibling Selector (p immediately after h2) */
+h2 + p {
+     background-color: lightgray;
+     }
+
+/* General Sibling Selector (all p after h2) */
+h2 ~ p {
+     font-weight: bold; 
+    }
+
+/* ---------------- PSEUDO-CLASS SELECTORS ---------------- */
+
+/* Hover on link */
+a:hover { color: red; }
+
+/* First child of list */
+li:first-child { color: orange; }
+
+/* Last child of list */
+li:last-child { text-decoration: underline; }
+
+/* ---------------- PSEUDO-ELEMENT SELECTORS ---------------- */
+
+/* First letter of paragraph */
+p::first-letter { font-size: 200%; color: brown; }
+
+/* Content after paragraph */
+p::after { content: " [End of paragraph]"; color: gray; }
+
+/* ---------------- ATTRIBUTE SELECTORS ---------------- */
+
+/* Input with type text */
+input[type="text"] { border: 2px solid blue; }
+
+/* Link with target _blank */
+a[target="_blank"] { color: green; }
+
+    </style>
+</head>
+<body>
+
+    <h1 id="main-heading">CSS Selector Forms Demo</h1>
+
+    <h2>Section Heading</h2>
+    <p>This is a paragraph after h2 (adjacent sibling).</p>
+    <p>This is another paragraph after h2 (general sibling).</p>
+
+    <div>
+        <p class="highlight">Paragraph inside a div (descendant selector).</p>
+        <span>Span inside div (child selector).</span>
+    </div>
+
+    <h3>Another Heading</h3>
+    <p>Simple paragraph to test pseudo-elements.</p>
+
+    <ul>
+        <li>First item</li>
+        <li>Middle item</li>
+        <li>Last item</li>
+    </ul>
+
+    <a href="https://example.com" target="_blank">External Link</a><br>
+    <a href="https://example.com">Normal Link</a><br>
+
+    <input type="text" placeholder="Text input">
+    <input type="password" placeholder="Password input">
+
+</body>
+</html>
+
+
+
